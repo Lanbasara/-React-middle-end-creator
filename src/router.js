@@ -1,30 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Layout } from 'antd'
 import {
   routerRedux,
   Route,
   Switch,
+  HashRouter
 } from 'dva/router';
-import Home from './home';
-import Login from './login';
 import './index.less'
-const {ConnectedRouter} = routerRedux;
-const { Header, Content, Footer} = Layout
-export default function Router({history}) {
+import Start from './start.js'
+const { ConnectedRouter } = routerRedux;
+export default function Router({ history }) {
   return (
     <ConnectedRouter history={history}>
-      <div>
-      <Header className="header">Header</Header>
-      <Content>
-      <Switch>
-        <Route path="/" exact component={Login} />
-        <Route path='/login' component={Login}/>
-        <Route path="/home" component={Home} />
-      </Switch>
-      </Content>
-      <Footer className="footer">Footer</Footer>
-      </div>
+      <HashRouter>
+        <Switch>
+          <Route path='/' component={Start} />
+        </Switch>
+      </HashRouter>
     </ConnectedRouter>
   );
 }

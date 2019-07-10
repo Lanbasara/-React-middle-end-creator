@@ -1,5 +1,5 @@
 {
-  "name": "React-middle-end-scaffold",
+  "name": "ghk-start-config",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -34,6 +34,7 @@
     "open-browser-webpack-plugin": "0.0.5",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
+    "react-hot-loader": "^4.12.5",
     "style-loader": "^0.23.1",
     "url-loader": "^2.0.1",
     "webpack": "^4.35.3",
@@ -52,6 +53,7 @@
     "fs": "0.0.1-security",
     "history": "^4.9.0",
     "lodash": "^4.17.13",
+    "owl-sdk": "^0.1.1",
     "prop-types": "^15.7.2",
     "qhistory": "^1.0.3",
     "qs": "^6.7.0",

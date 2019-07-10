@@ -6,7 +6,7 @@ class Home extends Component {
 		return (
 			<div>
 				<div className="home">
-				home
+				Homepage
 			</div>
 			<Button>This is a test of Antd </Button>
 			</div>

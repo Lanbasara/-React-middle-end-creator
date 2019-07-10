@@ -7,7 +7,7 @@ class Login extends Component {
 			<div className="login">
 				<Link to='/home'>
 					<Button type="primary">
-						To Home
+						Home
 					</Button>
 				</Link>
 			</div>
