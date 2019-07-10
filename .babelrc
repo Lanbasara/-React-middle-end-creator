@@ -20,6 +20,6 @@
         "style" : "css"
       }
     ],
-    ["react-hot-loader/babel"]
+    ["dva-hmr"]
   ]
 }

@@ -6,7 +6,7 @@ class Home extends Component {
 		return (
 			<div>
 				<div className="home">
-				Homepage
+				This is homepage
 			</div>
 			<Button>This is a test of Antd </Button>
 			</div>

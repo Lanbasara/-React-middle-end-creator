@@ -6,8 +6,7 @@ const OpenBrowserPlugin = require("open-browser-webpack-plugin")
 const devConfig = {
     mode: 'development',     
     devtool:"cheap-module-eval-source-map",
-    entry: {     
-                    
+    entry: {                 
         main: ['webpack-hot-middleware/client?noInfo=true&reload=true','react-hot-loader/patch','./src/index.js']
     },  
     optimization : {
