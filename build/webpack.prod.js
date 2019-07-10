@@ -4,8 +4,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CSSSplitWebpackPlugin = require('css-split-webpack-plugin').default; 
 const webpack = require("webpack")
+const WorkboxPlugin = require('workbox-webpack-plugin');
 const prodConfig = {
-    mode: "production",  // 只要在生产模式下， 代码就会自动压缩
+    mode: "production", 
     devtool:"cheap-module-source-map",
     entry: {
         main: './src/index.js'
@@ -69,6 +70,10 @@ const prodConfig = {
             filename : '[name]-[part].[ext]'
         }),
         new webpack.HashedModuleIdsPlugin(),
+        new WorkboxPlugin.GenerateSW({
+            clientsClaim : true,
+            skipWaiting : true
+        })
     ],
     output: {
         filename : '[name].[contenthash].js',
