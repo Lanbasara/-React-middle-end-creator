@@ -42,6 +42,10 @@ const commonConfig = {
     ],
     output: {
         path: path.resolve(__dirname, '../dist') 
+    },
+    resolve : {
+      extensions : ['.js','jsx'],
+      mainFiles : ['index','view']
     }
 }
 

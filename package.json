@@ -8,6 +8,9 @@
     "start:server": "node ./build/dev-server.js",
     "build": "webpack --config ./build/webpack.prod.js"
   },
+  "sideEffects": [
+    "*.css"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {

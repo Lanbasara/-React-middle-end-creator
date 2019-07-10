@@ -8,6 +8,9 @@ const devConfig = {
     entry: {                  
         main: ['webpack-hot-middleware/client?noInfo=true&reload=true', './src/index.js']
     },  
+    optimization : {
+        usedExports : true
+    },
     devServer: {
         contentBase: path.join(__dirname, '../dist'),
         hot : true,
