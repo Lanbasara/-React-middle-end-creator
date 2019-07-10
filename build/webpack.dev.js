@@ -14,7 +14,7 @@ const devConfig = {
     devServer: {
         contentBase: path.join(__dirname, '../dist'),
         hot : true,
-        port : 8000
+        port : 8000,
     },
     plugins: [                     
         new webpack.NamedModulesPlugin(),  

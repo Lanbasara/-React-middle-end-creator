@@ -56,12 +56,7 @@ const commonConfig = {
       },
     ]
   },
-    plugins: [                     
-        new HtmlWebpackPlugin({   
-            template: 'src/index.html',
-        }),
-        new CleanWebpackPlugin(), 
-    ],
+    plugins: plugins,
     output: {
         path: path.resolve(__dirname, '../dist') 
     },
