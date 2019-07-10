@@ -1,7 +1,29 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const fs = require("fs");
+const webpack = require("webpack")
+const AddAssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin')
+const plugins = [                     
+  new HtmlWebpackPlugin({   
+      template: 'src/index.html',
+  }),
+  new CleanWebpackPlugin(), 
+];
 
+const files = fs.readdirSync(path.resolve(__dirname,'../dll'));
+files.forEach((file) => {
+  if(/.*\.dll.js/.test(file)){
+    plugins.push(new AddAssetHtmlWebpackPlugin({
+      filepath : path.resolve(__dirname,'../dll',file)
+    }));
+  }
+  if(/.*\.manifest.json/.test(file)){
+    plugins.push(new webpack.DllReferencePlugin({
+      manifest : path.resolve(__dirname, '../dll', file)
+    }));
+  }
+})
 const commonConfig = {
   module : {
     rules : [
