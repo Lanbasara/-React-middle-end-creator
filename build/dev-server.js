@@ -23,7 +23,7 @@ let hotMiddleWare = webpackHotMiddleWare(complier,{
 
 app.use(devMiddleware)
 app.use(hotMiddleWare)
-
+// static files
 app.use(express.static(DIST_DIR))
 
 app.listen(8000, ()=>{

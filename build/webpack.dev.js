@@ -2,6 +2,7 @@ const merge = require('webpack-merge');
 const commonConfig = require('./webpack.common.js');
 const path = require("path")
 const webpack = require("webpack")
+const OpenBrowserPlugin = require("open-browser-webpack-plugin")
 const devConfig = {
     mode: 'development',     
     devtool:"cheap-module-eval-source-map",
@@ -19,6 +20,7 @@ const devConfig = {
     plugins: [                     
         new webpack.NamedModulesPlugin(),  
         new webpack.HotModuleReplacementPlugin(), 
+        new OpenBrowserPlugin({ url: 'http://localhost:8000' }), // 自动打开浏览器
     ],
     output: {
         publicPath: "/",

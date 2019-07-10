@@ -3,12 +3,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const fs = require("fs");
 const webpack = require("webpack")
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const AddAssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin')
 const plugins = [                     
   new HtmlWebpackPlugin({   
       template: 'src/index.html',
   }),
-  new CleanWebpackPlugin(), 
+  new CleanWebpackPlugin({
+    root : path.resolve(__dirname, '../dist'),
+    verbose : true,
+    dry : false
+  }), 
+  new FriendlyErrorsWebpackPlugin()
 ];
 
 const files = fs.readdirSync(path.resolve(__dirname,'../dll'));
