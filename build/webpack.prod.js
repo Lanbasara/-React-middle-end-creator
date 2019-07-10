@@ -34,7 +34,30 @@ const prodConfig = {
         ]
     },
     optimization : {
-        minimizer : [new OptimizeCSSAssetsPlugin({})]
+        minimizer : [new OptimizeCSSAssetsPlugin({})],
+    },
+    optimization : {
+        splitChunks : {
+            chunks : "all",
+            minSize : 30000,
+            minChunks : 1,
+            maxAsyncRequests : 3,
+            maxInitialRequests : 4,
+            automaticNameDelimiter : '~',
+            name : true,
+            cacheGroups : {
+                vendors : {
+                    test : /[\\/]node_modules[\\/]/,
+                    priority : -10,
+                    filename : 'vendors.js'
+                },
+                default : {
+                    priority : -20,
+                    reuseExistingChunk: true, 
+                    filename: 'common.js'
+                }
+            }
+        }
     },
     plugins: [
         new MiniCssExtractPlugin({
