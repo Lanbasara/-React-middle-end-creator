@@ -1,7 +1,7 @@
 # Middle-end-creator
 
 ## Usage
-0. Can be use as Cli scaffold tools
+0. Can be used as Cli scaffold tools
    * [create-middle-end](https://github.com/Lanbasara/create-middle-end)
 1. ```npm install```
 2. ```npm run dll (split dll)```
