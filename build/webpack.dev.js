@@ -7,7 +7,7 @@ const devConfig = {
     mode: 'development',     
     devtool:"cheap-module-eval-source-map",
     entry: {                 
-        main: ['webpack-hot-middleware/client?noInfo=true&reload=true','react-hot-loader/patch','./src/index.js']
+        main: path.join(__dirname,'../src/index.js')
     },  
     optimization : {
         usedExports : true
@@ -19,7 +19,6 @@ const devConfig = {
     },
     plugins: [                     
         new webpack.NamedModulesPlugin(),  
-        new webpack.HotModuleReplacementPlugin(), 
         new OpenBrowserPlugin({ url: 'http://localhost:8000' }), // 自动打开浏览器
     ],
     output: {

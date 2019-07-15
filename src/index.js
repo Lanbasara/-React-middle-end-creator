@@ -20,9 +20,3 @@ app.model(require('./home/model').default);
 app.router(require('./router').default);
 // 4. Start
 app.start('#root');
-// HMR
-if(module.hot){
-  module.hot.accept('./start.js', ()=>{
-		console.log('1')
-  })
-}
