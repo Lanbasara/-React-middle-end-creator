@@ -11,7 +11,7 @@
 ## Features
 - [x] Babel + react
 - [x] webpack-dev-server + express
-- [x] Jest + enzyme + enzyme-adapter-react-16 
+- [x] Jest + enzyme + enzyme-adapter-react-16
 - [x] html-webpack-plugin
 - [x] css + less
 - [x] font + picture
