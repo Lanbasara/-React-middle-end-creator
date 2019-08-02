@@ -13,7 +13,7 @@
 - [x] webpack-dev-server + express
 - [x] Jest + enzyme + enzyme-adapter-react-16
 - [x] html-webpack-plugin
-- [x] css + less
+- [x] css + less + sass
 - [x] font + picture
 - [x] Antd + Dva + Hot module replacement
 - [x] mini-css-extract-plugin + css-split
