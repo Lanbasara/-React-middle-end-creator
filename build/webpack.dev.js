@@ -3,8 +3,7 @@ const commonConfig = require('./webpack.common.js');
 const path = require("path")
 const webpack = require("webpack")
 const OpenBrowserPlugin = require("open-browser-webpack-plugin")
-const devConfig = {
-    mode: 'development',     
+const devConfig = {    
     devtool:"cheap-module-eval-source-map",
     entry: {                 
         main: path.join(__dirname,'../src/index.js')
@@ -37,6 +36,20 @@ const devConfig = {
                         importLoaders: 2
                     }
                 }, 'less-loader', 'postcss-loader']
+        },
+        {
+            test : /\.scss$/,
+            use : [
+                {
+                    loader : 'style-loader'
+                },
+                {
+                    loader : 'css-loader'
+                },
+                {
+                    loader : 'sass-loader'
+                }
+            ]
         },
         {
             test: /\.css$/,
