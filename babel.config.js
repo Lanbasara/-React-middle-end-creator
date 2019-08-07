@@ -2,6 +2,7 @@ const dev = process.env.NODE_ENV === 'test'
 const devConfig = {
   plugins: [
     ['import', {libraryName: 'antd',libraryDirectory:'es', style : 'css'}],
+    ["@babel/plugin-proposal-decorators", {legacy: true}],
     '@babel/plugin-proposal-class-properties',
     ['dva-hmr']
   ],
@@ -21,6 +22,7 @@ const devConfig = {
 };
 const prodConfig = {
   plugins: [
+    ["@babel/plugin-proposal-decorators", {legacy: true}],
     '@babel/plugin-proposal-class-properties',
     ['dva-hmr']
   ],
