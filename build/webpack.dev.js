@@ -15,6 +15,7 @@ const devConfig = {
         contentBase: path.join(__dirname, '../dist'),
         hot : true,
         port : 8000,
+        historyApiFallback: true
     },
     plugins: [                     
         new webpack.NamedModulesPlugin(),  
